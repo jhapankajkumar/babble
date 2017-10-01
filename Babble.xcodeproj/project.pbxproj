@@ -16,6 +16,7 @@
 		2C93931C1F80A23F00420A25 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C93931B1F80A23F00420A25 /* ChatViewController.swift */; };
 		2C93931E1F80A24F00420A25 /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C93931D1F80A24F00420A25 /* ChannelViewController.swift */; };
 		2C9393221F80ACA700420A25 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9393211F80ACA100420A25 /* SWRevealViewController.m */; };
+		2C9393241F80B02400420A25 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9393231F80B02400420A25 /* GradientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		2C93931D1F80A24F00420A25 /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
 		2C9393201F80ACA100420A25 /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		2C9393211F80ACA100420A25 /* SWRevealViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		2C9393231F80B02400420A25 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 		2C93931A1F80A21300420A25 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2C9393231F80B02400420A25 /* GradientView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 			files = (
 				2C93931C1F80A23F00420A25 /* ChatViewController.swift in Sources */,
 				2C93931E1F80A24F00420A25 /* ChannelViewController.swift in Sources */,
+				2C9393241F80B02400420A25 /* GradientView.swift in Sources */,
 				2C7B7E1B1F80133C00042295 /* AppDelegate.swift in Sources */,
 				2C9393221F80ACA700420A25 /* SWRevealViewController.m in Sources */,
 			);
