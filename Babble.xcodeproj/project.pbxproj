@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C107F6D1F80C776003CD7E8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C107F6C1F80C776003CD7E8 /* LoginViewController.swift */; };
 		2C7B7E1B1F80133C00042295 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7B7E1A1F80133C00042295 /* AppDelegate.swift */; };
 		2C7B7E201F80133C00042295 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C7B7E1E1F80133C00042295 /* Main.storyboard */; };
 		2C7B7E221F80133C00042295 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C7B7E211F80133C00042295 /* Assets.xcassets */; };
@@ -17,6 +18,9 @@
 		2C93931E1F80A24F00420A25 /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C93931D1F80A24F00420A25 /* ChannelViewController.swift */; };
 		2C9393221F80ACA700420A25 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9393211F80ACA100420A25 /* SWRevealViewController.m */; };
 		2C9393241F80B02400420A25 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9393231F80B02400420A25 /* GradientView.swift */; };
+		2C9393271F80BA8F00420A25 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9393261F80BA8F00420A25 /* Constants.swift */; };
+		2C9393291F80BC5C00420A25 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9393281F80BC5C00420A25 /* CustomTextField.swift */; };
+		2C93932B1F80BD8D00420A25 /* BorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C93932A1F80BD8D00420A25 /* BorderButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C107F6C1F80C776003CD7E8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2C7B7E171F80133C00042295 /* Babble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Babble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C7B7E1A1F80133C00042295 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C7B7E1F1F80133C00042295 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -55,6 +60,9 @@
 		2C9393201F80ACA100420A25 /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		2C9393211F80ACA100420A25 /* SWRevealViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		2C9393231F80B02400420A25 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		2C9393261F80BA8F00420A25 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2C9393281F80BC5C00420A25 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		2C93932A1F80BD8D00420A25 /* BorderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +113,7 @@
 		2C7B7E191F80133C00042295 /* Babble */ = {
 			isa = PBXGroup;
 			children = (
+				2C9393251F80BA7A00420A25 /* Utilities */,
 				2C93931A1F80A21300420A25 /* View */,
 				2C9393191F80A20800420A25 /* Model */,
 				2C9393181F80A20200420A25 /* Controller */,
@@ -151,6 +160,7 @@
 			children = (
 				2C93931B1F80A23F00420A25 /* ChatViewController.swift */,
 				2C93931D1F80A24F00420A25 /* ChannelViewController.swift */,
+				2C107F6C1F80C776003CD7E8 /* LoginViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -165,9 +175,19 @@
 		2C93931A1F80A21300420A25 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2C93932A1F80BD8D00420A25 /* BorderButton.swift */,
+				2C9393281F80BC5C00420A25 /* CustomTextField.swift */,
 				2C9393231F80B02400420A25 /* GradientView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		2C9393251F80BA7A00420A25 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				2C9393261F80BA8F00420A25 /* Constants.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,11 +325,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C107F6D1F80C776003CD7E8 /* LoginViewController.swift in Sources */,
 				2C93931C1F80A23F00420A25 /* ChatViewController.swift in Sources */,
 				2C93931E1F80A24F00420A25 /* ChannelViewController.swift in Sources */,
 				2C9393241F80B02400420A25 /* GradientView.swift in Sources */,
 				2C7B7E1B1F80133C00042295 /* AppDelegate.swift in Sources */,
 				2C9393221F80ACA700420A25 /* SWRevealViewController.m in Sources */,
+				2C9393271F80BA8F00420A25 /* Constants.swift in Sources */,
+				2C9393291F80BC5C00420A25 /* CustomTextField.swift in Sources */,
+				2C93932B1F80BD8D00420A25 /* BorderButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

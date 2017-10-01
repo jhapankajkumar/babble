@@ -7,7 +7,25 @@
 		<key>Babble.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>2C7B7E161F80133C00042295</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2C7B7E2A1F80133D00042295</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2C7B7E351F80133D00042295</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

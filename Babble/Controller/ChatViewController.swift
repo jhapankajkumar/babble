@@ -10,6 +10,8 @@ import UIKit
 
 class ChatViewController: UIViewController {
 
+    @IBAction func loginButtonPressed(_ sender: Any) {
+    }
     //Outlets
     @IBOutlet weak var menuBtn: UIButton!
     
