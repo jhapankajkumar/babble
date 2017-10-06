@@ -7,7 +7,6 @@
 //
 
 import UIKit
-@IBDesignable
 class CustomTextField: UITextField {
     
     
@@ -27,9 +26,9 @@ class CustomTextField: UITextField {
     }
  */
     
-    override func prepareForInterfaceBuilder() {
-        customizeView()
-    }
+//    override func prepareForInterfaceBuilder() {
+//        customizeView()
+//    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

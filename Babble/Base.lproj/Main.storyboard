@@ -307,6 +307,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="logginButtonPressed:" destination="42s-P4-0mP" eventType="touchUpInside" id="Sr4-68-LP7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -323,6 +326,8 @@
                         <viewLayoutGuide key="safeArea" id="cVh-yq-KAk"/>
                     </view>
                     <connections>
+                        <outlet property="passwordTextField" destination="cGr-z1-dD2" id="Uoy-wX-2LR"/>
+                        <outlet property="userNameTextField" destination="8EK-Vh-Qyk" id="Kfp-Nb-87j"/>
                         <segue destination="Mr5-H1-6GN" kind="show" identifier="toCreate_Account" id="EMb-HO-gnJ"/>
                     </connections>
                 </viewController>
@@ -357,6 +362,9 @@
                                 <state key="normal" title="Choose Avatar">
                                     <color key="titleColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="pickAvatarPressed:" destination="Mr5-H1-6GN" eventType="touchUpInside" id="YjT-bM-vY2"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5jO-mk-5Uz">
                                 <rect key="frame" x="62" y="146.5" width="250" height="156"/>
@@ -444,6 +452,9 @@
                                 <state key="normal" title="Create Account">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="createAccountPressed:" destination="Mr5-H1-6GN" eventType="touchUpInside" id="UEf-Pk-6gT"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smackProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="DGg-c9-MPv">
                                 <rect key="frame" x="137.5" y="336" width="100" height="100"/>
@@ -463,6 +474,9 @@
                                 <state key="normal" title="Generate background color">
                                     <color key="titleColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="pickBGColorPressed:" destination="Mr5-H1-6GN" eventType="touchUpInside" id="n8W-D3-wQX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -483,6 +497,10 @@
                         <viewLayoutGuide key="safeArea" id="1WF-Ck-0XS"/>
                     </view>
                     <connections>
+                        <outlet property="emailTextField" destination="D4F-M2-FKC" id="8yb-L4-gN8"/>
+                        <outlet property="passwordTextField" destination="i0x-sv-Jk0" id="bBX-P1-Xyz"/>
+                        <outlet property="userImage" destination="DGg-c9-MPv" id="xiV-xO-tpZ"/>
+                        <outlet property="userNameTextField" destination="WZZ-BI-t8C" id="Hhg-7B-kLd"/>
                         <segue destination="QNw-Z3-gCM" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindWithSegue:" id="K01-3E-Lxx"/>
                     </connections>
                 </viewController>

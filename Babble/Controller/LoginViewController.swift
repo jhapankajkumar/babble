@@ -10,6 +10,8 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var passwordTextField: CustomTextField!
+    @IBOutlet weak var userNameTextField: CustomTextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,10 +22,27 @@ class LoginViewController: UIViewController {
         
     }
     
+    @IBAction func logginButtonPressed(_ sender: Any) {
+        view.endEditing(true)
+        
+        guard let email = userNameTextField.text, userNameTextField.text != "" else {
+            return
+        }
+        guard let password = passwordTextField.text, passwordTextField.text != "" else {
+            return
+        }
+        AuthService.instance.loginUser(with: email, password: password) { (result) in
+            if(result) {
+                print("success")
+            }
+            else {
+                print("failure")
+            }
+        }
+    }
+    
     @IBAction func createAccountButtonPressed(_ sender: Any) {
-        
         performSegue(withIdentifier: TO_CREATE_ACCOUNT, sender: nil)
-        
     }
     
     

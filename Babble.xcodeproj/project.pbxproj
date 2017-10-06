@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2C107F6D1F80C776003CD7E8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C107F6C1F80C776003CD7E8 /* LoginViewController.swift */; };
-		2C107F6F1F80C93F003CD7E8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C107F6E1F80C93F003CD7E8 /* SignUpViewController.swift */; };
 		2C30AC7C1F87CCBD007EFFCC /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30AC7B1F87CCBD007EFFCC /* CreateAccountViewController.swift */; };
+		2C30AC7F1F880548007EFFCC /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30AC7E1F880548007EFFCC /* AuthService.swift */; };
 		2C7B7E1B1F80133C00042295 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7B7E1A1F80133C00042295 /* AppDelegate.swift */; };
 		2C7B7E201F80133C00042295 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C7B7E1E1F80133C00042295 /* Main.storyboard */; };
 		2C7B7E221F80133C00042295 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C7B7E211F80133C00042295 /* Assets.xcassets */; };
@@ -23,6 +23,7 @@
 		2C9393271F80BA8F00420A25 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9393261F80BA8F00420A25 /* Constants.swift */; };
 		2C9393291F80BC5C00420A25 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9393281F80BC5C00420A25 /* CustomTextField.swift */; };
 		2C93932B1F80BD8D00420A25 /* BorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C93932A1F80BD8D00420A25 /* BorderButton.swift */; };
+		75AC8022137451C9C99A5186 /* Pods_Babble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6807925AF346C26798DBDA4 /* Pods_Babble.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,8 +45,9 @@
 
 /* Begin PBXFileReference section */
 		2C107F6C1F80C776003CD7E8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		2C107F6E1F80C93F003CD7E8 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		2C30AC7B1F87CCBD007EFFCC /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		2C30AC7E1F880548007EFFCC /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		2C30AC821F8807EF007EFFCC /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C7B7E171F80133C00042295 /* Babble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Babble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C7B7E1A1F80133C00042295 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C7B7E1F1F80133C00042295 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -67,6 +69,9 @@
 		2C9393261F80BA8F00420A25 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2C9393281F80BC5C00420A25 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		2C93932A1F80BD8D00420A25 /* BorderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderButton.swift; sourceTree = "<group>"; };
+		744B36220373D0082976695B /* Pods-Babble.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Babble.release.xcconfig"; path = "Pods/Target Support Files/Pods-Babble/Pods-Babble.release.xcconfig"; sourceTree = "<group>"; };
+		C6807925AF346C26798DBDA4 /* Pods_Babble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Babble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D85FB1ACA12351957AF461CA /* Pods-Babble.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Babble.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Babble/Pods-Babble.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75AC8022137451C9C99A5186 /* Pods_Babble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +100,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C30AC7D1F88052D007EFFCC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2C30AC7E1F880548007EFFCC /* AuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2C30AC801F8807EF007EFFCC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C30AC821F8807EF007EFFCC /* Alamofire.framework */,
+				C6807925AF346C26798DBDA4 /* Pods_Babble.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2C7B7E0E1F80133C00042295 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +124,8 @@
 				2C7B7E2E1F80133D00042295 /* BabbleTests */,
 				2C7B7E391F80133D00042295 /* BabbleUITests */,
 				2C7B7E181F80133C00042295 /* Products */,
+				2C30AC801F8807EF007EFFCC /* Frameworks */,
+				E126D436793FFC0299300386 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,6 +142,7 @@
 		2C7B7E191F80133C00042295 /* Babble */ = {
 			isa = PBXGroup;
 			children = (
+				2C30AC7D1F88052D007EFFCC /* Services */,
 				2C9393251F80BA7A00420A25 /* Utilities */,
 				2C93931A1F80A21300420A25 /* View */,
 				2C9393191F80A20800420A25 /* Model */,
@@ -165,7 +191,6 @@
 				2C93931B1F80A23F00420A25 /* ChatViewController.swift */,
 				2C93931D1F80A24F00420A25 /* ChannelViewController.swift */,
 				2C107F6C1F80C776003CD7E8 /* LoginViewController.swift */,
-				2C107F6E1F80C93F003CD7E8 /* SignUpViewController.swift */,
 				2C30AC7B1F87CCBD007EFFCC /* CreateAccountViewController.swift */,
 			);
 			path = Controller;
@@ -196,6 +221,15 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		E126D436793FFC0299300386 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D85FB1ACA12351957AF461CA /* Pods-Babble.debug.xcconfig */,
+				744B36220373D0082976695B /* Pods-Babble.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -203,9 +237,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2C7B7E3F1F80133D00042295 /* Build configuration list for PBXNativeTarget "Babble" */;
 			buildPhases = (
+				6B2E4A6C26EAD03C64288008 /* [CP] Check Pods Manifest.lock */,
 				2C7B7E131F80133C00042295 /* Sources */,
 				2C7B7E141F80133C00042295 /* Frameworks */,
 				2C7B7E151F80133C00042295 /* Resources */,
+				31DA90337A552CE7FBC17B26 /* [CP] Embed Pods Frameworks */,
+				38A17CFD9A306F315DF01C0B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -326,6 +363,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		31DA90337A552CE7FBC17B26 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Babble/Pods-Babble-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Babble/Pods-Babble-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		38A17CFD9A306F315DF01C0B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Babble/Pods-Babble-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B2E4A6C26EAD03C64288008 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Babble-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2C7B7E131F80133C00042295 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -334,9 +429,9 @@
 				2C107F6D1F80C776003CD7E8 /* LoginViewController.swift in Sources */,
 				2C93931C1F80A23F00420A25 /* ChatViewController.swift in Sources */,
 				2C93931E1F80A24F00420A25 /* ChannelViewController.swift in Sources */,
+				2C30AC7F1F880548007EFFCC /* AuthService.swift in Sources */,
 				2C30AC7C1F87CCBD007EFFCC /* CreateAccountViewController.swift in Sources */,
 				2C9393241F80B02400420A25 /* GradientView.swift in Sources */,
-				2C107F6F1F80C93F003CD7E8 /* SignUpViewController.swift in Sources */,
 				2C7B7E1B1F80133C00042295 /* AppDelegate.swift in Sources */,
 				2C9393221F80ACA700420A25 /* SWRevealViewController.m in Sources */,
 				2C9393271F80BA8F00420A25 /* Constants.swift in Sources */,
@@ -505,6 +600,7 @@
 		};
 		2C7B7E401F80133D00042295 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D85FB1ACA12351957AF461CA /* Pods-Babble.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -523,6 +619,7 @@
 		};
 		2C7B7E411F80133D00042295 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 744B36220373D0082976695B /* Pods-Babble.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
