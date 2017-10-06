@@ -41,12 +41,11 @@ class CustomTextField: UITextField {
         layer.cornerRadius = 5.0
         textAlignment = .left
         clipsToBounds = true
-        textColor = UIColor.black
-        /*if let p = placeholder {
-            let place = NSAttributedString(string: p, attributes: [.foregroundColor  : #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)])
+        if let p = placeholder {
+            let place = NSAttributedString(string: p, attributes: [.foregroundColor  : #colorLiteral(red: 0.3568627451, green: 0.6235294118, blue: 0.7960784314, alpha: 1)])
             attributedPlaceholder = place
-            textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            textColor = #colorLiteral(red: 0.3568627451, green: 0.6235294118, blue: 0.7960784314, alpha: 1)
         }
- */
+
     }
 }

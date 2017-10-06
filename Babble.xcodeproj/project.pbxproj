@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2C107F6D1F80C776003CD7E8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C107F6C1F80C776003CD7E8 /* LoginViewController.swift */; };
+		2C107F6F1F80C93F003CD7E8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C107F6E1F80C93F003CD7E8 /* SignUpViewController.swift */; };
+		2C30AC7C1F87CCBD007EFFCC /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30AC7B1F87CCBD007EFFCC /* CreateAccountViewController.swift */; };
 		2C7B7E1B1F80133C00042295 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7B7E1A1F80133C00042295 /* AppDelegate.swift */; };
 		2C7B7E201F80133C00042295 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C7B7E1E1F80133C00042295 /* Main.storyboard */; };
 		2C7B7E221F80133C00042295 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C7B7E211F80133C00042295 /* Assets.xcassets */; };
@@ -42,6 +44,8 @@
 
 /* Begin PBXFileReference section */
 		2C107F6C1F80C776003CD7E8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2C107F6E1F80C93F003CD7E8 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		2C30AC7B1F87CCBD007EFFCC /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		2C7B7E171F80133C00042295 /* Babble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Babble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C7B7E1A1F80133C00042295 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C7B7E1F1F80133C00042295 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -161,6 +165,8 @@
 				2C93931B1F80A23F00420A25 /* ChatViewController.swift */,
 				2C93931D1F80A24F00420A25 /* ChannelViewController.swift */,
 				2C107F6C1F80C776003CD7E8 /* LoginViewController.swift */,
+				2C107F6E1F80C93F003CD7E8 /* SignUpViewController.swift */,
+				2C30AC7B1F87CCBD007EFFCC /* CreateAccountViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -328,7 +334,9 @@
 				2C107F6D1F80C776003CD7E8 /* LoginViewController.swift in Sources */,
 				2C93931C1F80A23F00420A25 /* ChatViewController.swift in Sources */,
 				2C93931E1F80A24F00420A25 /* ChannelViewController.swift in Sources */,
+				2C30AC7C1F87CCBD007EFFCC /* CreateAccountViewController.swift in Sources */,
 				2C9393241F80B02400420A25 /* GradientView.swift in Sources */,
+				2C107F6F1F80C93F003CD7E8 /* SignUpViewController.swift in Sources */,
 				2C7B7E1B1F80133C00042295 /* AppDelegate.swift in Sources */,
 				2C9393221F80ACA700420A25 /* SWRevealViewController.m in Sources */,
 				2C9393271F80BA8F00420A25 /* Constants.swift in Sources */,
