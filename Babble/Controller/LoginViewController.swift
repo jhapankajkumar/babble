@@ -31,7 +31,7 @@ class LoginViewController: UIViewController {
         guard let password = passwordTextField.text, passwordTextField.text != "" else {
             return
         }
-        AuthService.instance.loginUser(with: email, password: password) { (result) in
+        AuthService.instance.loginUser(withUserName: email, andPassword: password) { (result) in
             if(result) {
                 print("success")
             }

@@ -10,6 +10,8 @@
 		2C107F6D1F80C776003CD7E8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C107F6C1F80C776003CD7E8 /* LoginViewController.swift */; };
 		2C30AC7C1F87CCBD007EFFCC /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30AC7B1F87CCBD007EFFCC /* CreateAccountViewController.swift */; };
 		2C30AC7F1F880548007EFFCC /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30AC7E1F880548007EFFCC /* AuthService.swift */; };
+		2C3A53AA1FCFEAB100D6641F /* AvatarPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A53A91FCFEAB100D6641F /* AvatarPickerViewController.swift */; };
+		2C3A53AC1FCFECC200D6641F /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A53AB1FCFECC200D6641F /* AvatarCell.swift */; };
 		2C7B7E1B1F80133C00042295 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7B7E1A1F80133C00042295 /* AppDelegate.swift */; };
 		2C7B7E201F80133C00042295 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C7B7E1E1F80133C00042295 /* Main.storyboard */; };
 		2C7B7E221F80133C00042295 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C7B7E211F80133C00042295 /* Assets.xcassets */; };
@@ -23,6 +25,7 @@
 		2C9393271F80BA8F00420A25 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9393261F80BA8F00420A25 /* Constants.swift */; };
 		2C9393291F80BC5C00420A25 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9393281F80BC5C00420A25 /* CustomTextField.swift */; };
 		2C93932B1F80BD8D00420A25 /* BorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C93932A1F80BD8D00420A25 /* BorderButton.swift */; };
+		2CA07DEC1FCFB08700F39F4D /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA07DEB1FCFB08700F39F4D /* UserDataService.swift */; };
 		75AC8022137451C9C99A5186 /* Pods_Babble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6807925AF346C26798DBDA4 /* Pods_Babble.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +51,8 @@
 		2C30AC7B1F87CCBD007EFFCC /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		2C30AC7E1F880548007EFFCC /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		2C30AC821F8807EF007EFFCC /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C3A53A91FCFEAB100D6641F /* AvatarPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerViewController.swift; sourceTree = "<group>"; };
+		2C3A53AB1FCFECC200D6641F /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		2C7B7E171F80133C00042295 /* Babble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Babble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C7B7E1A1F80133C00042295 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C7B7E1F1F80133C00042295 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -69,6 +74,7 @@
 		2C9393261F80BA8F00420A25 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2C9393281F80BC5C00420A25 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		2C93932A1F80BD8D00420A25 /* BorderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderButton.swift; sourceTree = "<group>"; };
+		2CA07DEB1FCFB08700F39F4D /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		744B36220373D0082976695B /* Pods-Babble.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Babble.release.xcconfig"; path = "Pods/Target Support Files/Pods-Babble/Pods-Babble.release.xcconfig"; sourceTree = "<group>"; };
 		C6807925AF346C26798DBDA4 /* Pods_Babble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Babble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D85FB1ACA12351957AF461CA /* Pods-Babble.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Babble.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Babble/Pods-Babble.debug.xcconfig"; sourceTree = "<group>"; };
@@ -104,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				2C30AC7E1F880548007EFFCC /* AuthService.swift */,
+				2CA07DEB1FCFB08700F39F4D /* UserDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -192,6 +199,7 @@
 				2C93931D1F80A24F00420A25 /* ChannelViewController.swift */,
 				2C107F6C1F80C776003CD7E8 /* LoginViewController.swift */,
 				2C30AC7B1F87CCBD007EFFCC /* CreateAccountViewController.swift */,
+				2C3A53A91FCFEAB100D6641F /* AvatarPickerViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -209,6 +217,7 @@
 				2C93932A1F80BD8D00420A25 /* BorderButton.swift */,
 				2C9393281F80BC5C00420A25 /* CustomTextField.swift */,
 				2C9393231F80B02400420A25 /* GradientView.swift */,
+				2C3A53AB1FCFECC200D6641F /* AvatarCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -428,14 +437,17 @@
 			files = (
 				2C107F6D1F80C776003CD7E8 /* LoginViewController.swift in Sources */,
 				2C93931C1F80A23F00420A25 /* ChatViewController.swift in Sources */,
+				2C3A53AC1FCFECC200D6641F /* AvatarCell.swift in Sources */,
 				2C93931E1F80A24F00420A25 /* ChannelViewController.swift in Sources */,
 				2C30AC7F1F880548007EFFCC /* AuthService.swift in Sources */,
 				2C30AC7C1F87CCBD007EFFCC /* CreateAccountViewController.swift in Sources */,
 				2C9393241F80B02400420A25 /* GradientView.swift in Sources */,
+				2CA07DEC1FCFB08700F39F4D /* UserDataService.swift in Sources */,
 				2C7B7E1B1F80133C00042295 /* AppDelegate.swift in Sources */,
 				2C9393221F80ACA700420A25 /* SWRevealViewController.m in Sources */,
 				2C9393271F80BA8F00420A25 /* Constants.swift in Sources */,
 				2C9393291F80BC5C00420A25 /* CustomTextField.swift in Sources */,
+				2C3A53AA1FCFEAB100D6641F /* AvatarPickerViewController.swift in Sources */,
 				2C93932B1F80BD8D00420A25 /* BorderButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -608,7 +620,7 @@
 				DEVELOPMENT_TEAM = J53NLM32CH;
 				INFOPLIST_FILE = Babble/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.aleph.Babble;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aleph.sc.velocity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Babble/HelpingClasses/Babble-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -627,7 +639,7 @@
 				DEVELOPMENT_TEAM = J53NLM32CH;
 				INFOPLIST_FILE = Babble/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.aleph.Babble;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aleph.sc.velocity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Babble/HelpingClasses/Babble-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
