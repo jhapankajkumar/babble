@@ -12,6 +12,7 @@
 		2C30AC7F1F880548007EFFCC /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30AC7E1F880548007EFFCC /* AuthService.swift */; };
 		2C3A53AA1FCFEAB100D6641F /* AvatarPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A53A91FCFEAB100D6641F /* AvatarPickerViewController.swift */; };
 		2C3A53AC1FCFECC200D6641F /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A53AB1FCFECC200D6641F /* AvatarCell.swift */; };
+		2C3A53AF1FCFF7CF00D6641F /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A53AE1FCFF7CF00D6641F /* CircleImage.swift */; };
 		2C7B7E1B1F80133C00042295 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7B7E1A1F80133C00042295 /* AppDelegate.swift */; };
 		2C7B7E201F80133C00042295 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C7B7E1E1F80133C00042295 /* Main.storyboard */; };
 		2C7B7E221F80133C00042295 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C7B7E211F80133C00042295 /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		2C30AC821F8807EF007EFFCC /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C3A53A91FCFEAB100D6641F /* AvatarPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerViewController.swift; sourceTree = "<group>"; };
 		2C3A53AB1FCFECC200D6641F /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
+		2C3A53AE1FCFF7CF00D6641F /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		2C7B7E171F80133C00042295 /* Babble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Babble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C7B7E1A1F80133C00042295 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C7B7E1F1F80133C00042295 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				2C9393281F80BC5C00420A25 /* CustomTextField.swift */,
 				2C9393231F80B02400420A25 /* GradientView.swift */,
 				2C3A53AB1FCFECC200D6641F /* AvatarCell.swift */,
+				2C3A53AE1FCFF7CF00D6641F /* CircleImage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 				2C9393291F80BC5C00420A25 /* CustomTextField.swift in Sources */,
 				2C3A53AA1FCFEAB100D6641F /* AvatarPickerViewController.swift in Sources */,
 				2C93932B1F80BD8D00420A25 /* BorderButton.swift in Sources */,
+				2C3A53AF1FCFF7CF00D6641F /* CircleImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

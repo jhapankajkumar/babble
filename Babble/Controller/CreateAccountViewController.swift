@@ -15,7 +15,9 @@ class CreateAccountViewController: UIViewController {
     @IBOutlet weak var emailTextField: CustomTextField!
     @IBOutlet weak var passwordTextField: CustomTextField!
     @IBOutlet weak var userImage: UIImageView!
+    var bgColor : UIColor?
     
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
     //variables
     var avatarName = "profileDefault"
@@ -23,14 +25,22 @@ class CreateAccountViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadingIndicator.isHidden = true
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if UserDataService.instace.avatarName != "" {
+            userImage.image = UIImage(named: UserDataService.instace.avatarName)
+            avatarName = UserDataService.instace.avatarName
+            if avatarName.contains("light") && bgColor == nil {
+                userImage.backgroundColor = UIColor.lightGray
+            }
+        }
+    }
     @IBAction func closeButtonPressed(_ sender: Any) {
-        
         performSegue(withIdentifier: UNWIND, sender: nil
         )
-        
     }
     
     @IBAction func createAccountPressed(_ sender: Any) {
@@ -39,7 +49,8 @@ class CreateAccountViewController: UIViewController {
         guard let password = passwordTextField.text, passwordTextField.text != "" else {return}
         guard let name  = userNameTextField.text, userNameTextField.text != "" else {return}
 //        guard let avatar
-        
+        loadingIndicator.isHidden = false
+        loadingIndicator.startAnimating()
         AuthService.instance.registerUser(withEmail: email, andPassword: password) { (success) in
             if(success) {
                 AuthService.instance.loginUser(withUserName: email, andPassword: password, completion: { (success) in
@@ -48,6 +59,8 @@ class CreateAccountViewController: UIViewController {
                         AuthService.instance.createUser(name: name, email: email, avatarName: self.avatarName, avatarColor: self.avatarColor, completion: { (success) in
                             if success {
                                 print(UserDataService.instace.name,UserDataService.instace.avatarName);
+                                self.loadingIndicator.stopAnimating()
+                                self.loadingIndicator.isHidden = true
                                 self.performSegue(withIdentifier: UNWIND, sender: nil)
                             }
                         })
@@ -66,6 +79,15 @@ class CreateAccountViewController: UIViewController {
     }
     
     @IBAction func pickBGColorPressed(_ sender: Any) {
+        
+        let red = CGFloat(arc4random_uniform(255)) / 255
+        let green = CGFloat(arc4random_uniform(255)) / 255
+        let blue = CGFloat(arc4random_uniform(255)) / 255
+        bgColor = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
+        UIView.animate(withDuration: 0.2) {
+          self.userImage.backgroundColor = self.bgColor
+        }
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
