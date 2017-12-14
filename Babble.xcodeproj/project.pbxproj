@@ -13,6 +13,8 @@
 		2C3A53AA1FCFEAB100D6641F /* AvatarPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A53A91FCFEAB100D6641F /* AvatarPickerViewController.swift */; };
 		2C3A53AC1FCFECC200D6641F /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A53AB1FCFECC200D6641F /* AvatarCell.swift */; };
 		2C3A53AF1FCFF7CF00D6641F /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A53AE1FCFF7CF00D6641F /* CircleImage.swift */; };
+		2C643DFF1FE23A2900C14BF3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C643DFD1FE23A2900C14BF3 /* ProfileViewController.swift */; };
+		2C643E001FE23A2900C14BF3 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C643DFE1FE23A2900C14BF3 /* ProfileViewController.xib */; };
 		2C7B7E1B1F80133C00042295 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7B7E1A1F80133C00042295 /* AppDelegate.swift */; };
 		2C7B7E201F80133C00042295 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C7B7E1E1F80133C00042295 /* Main.storyboard */; };
 		2C7B7E221F80133C00042295 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C7B7E211F80133C00042295 /* Assets.xcassets */; };
@@ -55,6 +57,8 @@
 		2C3A53A91FCFEAB100D6641F /* AvatarPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerViewController.swift; sourceTree = "<group>"; };
 		2C3A53AB1FCFECC200D6641F /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		2C3A53AE1FCFF7CF00D6641F /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		2C643DFD1FE23A2900C14BF3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		2C643DFE1FE23A2900C14BF3 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		2C7B7E171F80133C00042295 /* Babble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Babble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C7B7E1A1F80133C00042295 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C7B7E1F1F80133C00042295 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -126,6 +130,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2C643E011FE23A3A00C14BF3 /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				2C643DFE1FE23A2900C14BF3 /* ProfileViewController.xib */,
+			);
+			path = XIBs;
+			sourceTree = "<group>";
+		};
 		2C7B7E0E1F80133C00042295 = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +163,7 @@
 		2C7B7E191F80133C00042295 /* Babble */ = {
 			isa = PBXGroup;
 			children = (
+				2C643E011FE23A3A00C14BF3 /* XIBs */,
 				2C30AC7D1F88052D007EFFCC /* Services */,
 				2C9393251F80BA7A00420A25 /* Utilities */,
 				2C93931A1F80A21300420A25 /* View */,
@@ -202,6 +215,7 @@
 				2C107F6C1F80C776003CD7E8 /* LoginViewController.swift */,
 				2C30AC7B1F87CCBD007EFFCC /* CreateAccountViewController.swift */,
 				2C3A53A91FCFEAB100D6641F /* AvatarPickerViewController.swift */,
+				2C643DFD1FE23A2900C14BF3 /* ProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -355,6 +369,7 @@
 			files = (
 				2C7B7E251F80133C00042295 /* LaunchScreen.storyboard in Resources */,
 				2C7B7E221F80133C00042295 /* Assets.xcassets in Resources */,
+				2C643E001FE23A2900C14BF3 /* ProfileViewController.xib in Resources */,
 				2C7B7E201F80133C00042295 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,6 +459,7 @@
 				2C93931E1F80A24F00420A25 /* ChannelViewController.swift in Sources */,
 				2C30AC7F1F880548007EFFCC /* AuthService.swift in Sources */,
 				2C30AC7C1F87CCBD007EFFCC /* CreateAccountViewController.swift in Sources */,
+				2C643DFF1FE23A2900C14BF3 /* ProfileViewController.swift in Sources */,
 				2C9393241F80B02400420A25 /* GradientView.swift in Sources */,
 				2CA07DEC1FCFB08700F39F4D /* UserDataService.swift in Sources */,
 				2C7B7E1B1F80133C00042295 /* AppDelegate.swift in Sources */,

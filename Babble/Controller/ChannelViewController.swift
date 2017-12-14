@@ -39,7 +39,13 @@ class ChannelViewController: UIViewController {
     }
     
     @IBAction func loginBtnPressed(_ sender: Any) {
-        performSegue(withIdentifier: TO_LOGIN, sender: nil)
+        
+        if AuthService.instance.isLoggedIn {
+            performSegue(withIdentifier: TO_PROFILE_VIEW, sender: nil)
+        }
+        else {
+            performSegue(withIdentifier: TO_LOGIN, sender: nil)
+        }
     }
 
 }

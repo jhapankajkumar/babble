@@ -87,6 +87,105 @@
             </objects>
             <point key="canvasLocation" x="284" y="608.54572713643188"/>
         </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="5wF-rs-Moh">
+            <objects>
+                <viewController id="Nau-m9-Oad" customClass="ProfileViewController" customModule="Babble" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XoC-iR-7Yj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JpX-Wq-vWg">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="93z-6k-SO1">
+                                <rect key="frame" x="16" y="153.5" width="343" height="360"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ToB-hE-Nxv">
+                                        <rect key="frame" x="307" y="8" width="28" height="28"/>
+                                        <state key="normal" image="closeButton"/>
+                                        <connections>
+                                            <action selector="closeButtonTapped:" destination="Nau-m9-Oad" eventType="touchUpInside" id="9tb-RN-ka4"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="xNn-0j-NUL">
+                                        <rect key="frame" x="106" y="58.5" width="131.5" height="203.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arZ-jh-zeH">
+                                                <rect key="frame" x="2.5" y="0.0" width="127" height="27.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
+                                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smackProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="ajJ-fz-9Jm" customClass="CircleImage" customModule="Babble" customModuleProvider="target">
+                                                <rect key="frame" x="16" y="39.5" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="1y1-6X-BB2"/>
+                                                    <constraint firstAttribute="height" constant="100" id="XW3-yh-igT"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pankaj" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jI9-1F-YAZ">
+                                                <rect key="frame" x="40" y="151.5" width="51.5" height="20"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pankaj@abc.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBB-S3-o2q">
+                                                <rect key="frame" x="0.0" y="183.5" width="131.5" height="20"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Co1-Zu-Pc7">
+                                        <rect key="frame" x="137" y="316" width="68" height="36"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                        <state key="normal" title="Logout"/>
+                                        <connections>
+                                            <action selector="logoutTapped:" destination="Nau-m9-Oad" eventType="touchUpInside" id="dRk-7w-1F2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.17368917104216555" green="0.8530223967414905" blue="0.92221814393997192" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="xNn-0j-NUL" firstAttribute="centerY" secondItem="93z-6k-SO1" secondAttribute="centerY" constant="-20" id="8Cf-Rx-zSD"/>
+                                    <constraint firstAttribute="bottom" secondItem="Co1-Zu-Pc7" secondAttribute="bottom" constant="8" id="AA6-h6-pO6"/>
+                                    <constraint firstAttribute="trailing" secondItem="ToB-hE-Nxv" secondAttribute="trailing" constant="8" id="D9Q-7L-sw0"/>
+                                    <constraint firstItem="ToB-hE-Nxv" firstAttribute="top" secondItem="93z-6k-SO1" secondAttribute="top" constant="8" id="HxY-xz-LBl"/>
+                                    <constraint firstItem="Co1-Zu-Pc7" firstAttribute="centerX" secondItem="93z-6k-SO1" secondAttribute="centerX" id="jWD-PL-2es"/>
+                                    <constraint firstItem="xNn-0j-NUL" firstAttribute="centerX" secondItem="93z-6k-SO1" secondAttribute="centerX" id="sAu-Zd-Yh4"/>
+                                    <constraint firstAttribute="height" constant="360" id="yKd-zL-zhh"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JpX-Wq-vWg" firstAttribute="leading" secondItem="vBL-Ae-LuQ" secondAttribute="leading" id="7Ja-t5-PRk"/>
+                            <constraint firstItem="93z-6k-SO1" firstAttribute="leading" secondItem="vBL-Ae-LuQ" secondAttribute="leading" constant="16" id="EUK-WA-Ypi"/>
+                            <constraint firstItem="JpX-Wq-vWg" firstAttribute="top" secondItem="vBL-Ae-LuQ" secondAttribute="top" id="GCz-C4-eyg"/>
+                            <constraint firstItem="93z-6k-SO1" firstAttribute="centerY" secondItem="XoC-iR-7Yj" secondAttribute="centerY" id="h4Q-is-GYW"/>
+                            <constraint firstItem="vBL-Ae-LuQ" firstAttribute="trailing" secondItem="JpX-Wq-vWg" secondAttribute="trailing" id="qlU-ym-IXX"/>
+                            <constraint firstItem="vBL-Ae-LuQ" firstAttribute="bottom" secondItem="JpX-Wq-vWg" secondAttribute="bottom" id="uy4-YL-TNZ"/>
+                            <constraint firstItem="vBL-Ae-LuQ" firstAttribute="trailing" secondItem="93z-6k-SO1" secondAttribute="trailing" constant="16" id="y7a-Lt-srT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vBL-Ae-LuQ"/>
+                    </view>
+                    <connections>
+                        <outlet property="backGroundView" destination="JpX-Wq-vWg" id="phu-KB-zrH"/>
+                        <outlet property="closeButton" destination="ToB-hE-Nxv" id="JOa-IA-oiN"/>
+                        <outlet property="containerView" destination="93z-6k-SO1" id="MhF-J6-UmR"/>
+                        <outlet property="logoutButton" destination="Co1-Zu-Pc7" id="N4T-r7-j2P"/>
+                        <outlet property="profileImage" destination="ajJ-fz-9Jm" id="FMC-30-T8o"/>
+                        <outlet property="userEmail" destination="PBB-S3-o2q" id="NRz-02-fjC"/>
+                        <outlet property="userName" destination="jI9-1F-YAZ" id="Nam-ub-e8y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vgc-FK-FIc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1080.8" y="31.934032983508249"/>
+        </scene>
         <!--Channel View Controller-->
         <scene sceneID="JoY-tX-Pul">
             <objects>
@@ -194,6 +293,7 @@
                         <outlet property="loginButton" destination="dAJ-3b-KKK" id="Czz-Xn-5hT"/>
                         <outlet property="userImage" destination="yF4-MQ-1P4" id="JH9-zU-xo8"/>
                         <segue destination="42s-P4-0mP" kind="show" identifier="toLogin" id="Zte-wL-Ipc"/>
+                        <segue destination="Nau-m9-Oad" kind="presentation" identifier="toProfileView" id="qyW-8o-xDh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qWx-pm-RNO" userLabel="First Responder" sceneMemberID="firstResponder"/>

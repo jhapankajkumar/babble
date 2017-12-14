@@ -30,6 +30,7 @@ let TO_LOGIN = "toLogin"
 let TO_CREATE_ACCOUNT = "toCreate_Account"
 let UNWIND = "unwindToChannel"
 let TO_AVATAR_PICKER = "toAvatarPicker"
+let TO_PROFILE_VIEW = "toProfileView"
 
 //userdefualt
 let TOKEN_KEY = "token"
