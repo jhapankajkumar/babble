@@ -62,6 +62,7 @@ class CreateAccountViewController: UIViewController {
                                 self.loadingIndicator.stopAnimating()
                                 self.loadingIndicator.isHidden = true
                                 self.performSegue(withIdentifier: UNWIND, sender: nil)
+                                NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
                             }
                         })
                     }
@@ -84,6 +85,7 @@ class CreateAccountViewController: UIViewController {
         let green = CGFloat(arc4random_uniform(255)) / 255
         let blue = CGFloat(arc4random_uniform(255)) / 255
         bgColor = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
+        avatarColor = "[\(red),\(green), \(blue), 1]"
         UIView.animate(withDuration: 0.2) {
           self.userImage.backgroundColor = self.bgColor
         }

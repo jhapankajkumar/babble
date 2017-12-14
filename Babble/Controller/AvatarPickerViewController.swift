@@ -22,6 +22,8 @@ class AvatarPickerViewController: UIViewController {
         super.viewDidLoad()
     }
 
+
+    
     @IBAction func backPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }

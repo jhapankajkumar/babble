@@ -191,6 +191,8 @@
                         <viewLayoutGuide key="safeArea" id="l5g-r7-Siz"/>
                     </view>
                     <connections>
+                        <outlet property="loginButton" destination="dAJ-3b-KKK" id="Czz-Xn-5hT"/>
+                        <outlet property="userImage" destination="yF4-MQ-1P4" id="JH9-zU-xo8"/>
                         <segue destination="42s-P4-0mP" kind="show" identifier="toLogin" id="Zte-wL-Ipc"/>
                     </connections>
                 </viewController>
