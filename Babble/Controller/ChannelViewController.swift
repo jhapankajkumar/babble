@@ -24,7 +24,26 @@ class ChannelViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        setupUserInfo()
+    }
     @objc func userDataDidChange(_ notification: NSNotification) {
+        setupUserInfo()
+    }
+    
+    @IBAction func loginBtnPressed(_ sender: Any) {
+        
+        if AuthService.instance.isLoggedIn {
+            let profileView = ProfileViewController()
+            profileView.modalPresentationStyle = .custom
+            present(profileView, animated: true, completion: nil)
+        }
+        else {
+            performSegue(withIdentifier: TO_LOGIN, sender: nil)
+        }
+    }
+    
+    func setupUserInfo()  {
         if AuthService.instance.isLoggedIn {
             loginButton.setTitle(UserDataService.instace.name, for: .normal)
             userImage.image = UIImage(named: UserDataService.instace.avatarName)
@@ -35,16 +54,6 @@ class ChannelViewController: UIViewController {
             loginButton.setTitle("Login", for: .normal)
             userImage.image = UIImage(named: "menuProfileIcon")
             userImage.backgroundColor = UIColor.clear
-        }
-    }
-    
-    @IBAction func loginBtnPressed(_ sender: Any) {
-        
-        if AuthService.instance.isLoggedIn {
-            performSegue(withIdentifier: TO_PROFILE_VIEW, sender: nil)
-        }
-        else {
-            performSegue(withIdentifier: TO_LOGIN, sender: nil)
         }
     }
 

@@ -19,6 +19,7 @@ let BASE_URL = "http://\(ipAddress!):3005/v1/"
 let URL_REGISTER = "\(BASE_URL)account/register"
 let URL_LOGIN = "\(BASE_URL)account/login"
 let URL_USER_ADD = "\(BASE_URL)user/add"
+let URL_USER_BY_EMAIL = "\(BASE_URL)user/byEmail/"
 
 
 //Notification Constants
@@ -36,3 +37,13 @@ let TO_PROFILE_VIEW = "toProfileView"
 let TOKEN_KEY = "token"
 let LOGGED_IN_KEY = "loggedIn"
 let USER_EMAIL = "userEmail"
+
+
+//Bearer Header
+
+let BEARER_HEADER =  [
+    "Content-Type" : "application/json; charset=utf-8",
+    "Authorization": "Bearer \(AuthService.instance.authToken)"
+]
+
+

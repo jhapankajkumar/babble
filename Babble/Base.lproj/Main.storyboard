@@ -95,7 +95,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JpX-Wq-vWg">
+                            <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JpX-Wq-vWg">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -160,7 +160,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="JpX-Wq-vWg" firstAttribute="leading" secondItem="vBL-Ae-LuQ" secondAttribute="leading" id="7Ja-t5-PRk"/>
                             <constraint firstItem="93z-6k-SO1" firstAttribute="leading" secondItem="vBL-Ae-LuQ" secondAttribute="leading" constant="16" id="EUK-WA-Ypi"/>
@@ -293,7 +293,6 @@
                         <outlet property="loginButton" destination="dAJ-3b-KKK" id="Czz-Xn-5hT"/>
                         <outlet property="userImage" destination="yF4-MQ-1P4" id="JH9-zU-xo8"/>
                         <segue destination="42s-P4-0mP" kind="show" identifier="toLogin" id="Zte-wL-Ipc"/>
-                        <segue destination="Nau-m9-Oad" kind="presentation" identifier="toProfileView" id="qyW-8o-xDh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qWx-pm-RNO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -413,6 +412,10 @@
                                     <action selector="logginButtonPressed:" destination="42s-P4-0mP" eventType="touchUpInside" id="Sr4-68-LP7"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="QfB-lP-bcJ">
+                                <rect key="frame" x="169" y="215" width="37" height="37"/>
+                                <color key="color" red="0.2901960784" green="0.30196078430000001" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -424,10 +427,13 @@
                             <constraint firstItem="paP-jI-0kr" firstAttribute="top" secondItem="cVh-yq-KAk" secondAttribute="top" constant="60" id="cww-lL-XrK"/>
                             <constraint firstItem="bQZ-sT-xq9" firstAttribute="top" secondItem="Pdc-kA-IX9" secondAttribute="bottom" id="gdI-zn-A7V"/>
                             <constraint firstItem="Hys-t7-38F" firstAttribute="centerX" secondItem="OLa-GJ-TKz" secondAttribute="centerX" id="jNu-xn-68I"/>
+                            <constraint firstItem="QfB-lP-bcJ" firstAttribute="centerX" secondItem="OLa-GJ-TKz" secondAttribute="centerX" id="s89-Vs-eqB"/>
+                            <constraint firstItem="QfB-lP-bcJ" firstAttribute="centerY" secondItem="OLa-GJ-TKz" secondAttribute="centerY" constant="-100" id="zbZ-Bx-pil"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cVh-yq-KAk"/>
                     </view>
                     <connections>
+                        <outlet property="loadingIndicator" destination="QfB-lP-bcJ" id="9Ny-e7-7BK"/>
                         <outlet property="passwordTextField" destination="cGr-z1-dD2" id="Uoy-wX-2LR"/>
                         <outlet property="userNameTextField" destination="8EK-Vh-Qyk" id="Kfp-Nb-87j"/>
                         <segue destination="Mr5-H1-6GN" kind="show" identifier="toCreate_Account" id="EMb-HO-gnJ"/>

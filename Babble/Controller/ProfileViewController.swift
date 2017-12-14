@@ -30,7 +30,7 @@ class ProfileViewController: UIViewController {
         self.profileImage.backgroundColor = UserDataService.instace.getColor(colors: UserDataService.instace.avatarColor)
         self.userEmail.text = UserDataService.instace.email
         self.userName.text = UserDataService.instace.name
-        
+        self.containerView.layer.cornerRadius = 6.0
         let closeTap = UITapGestureRecognizer.init(target: self, action: #selector(ProfileViewController.closeTapped(_:)))
         backGroundView.addGestureRecognizer(closeTap)
     }

@@ -12,10 +12,13 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var passwordTextField: CustomTextField!
     @IBOutlet weak var userNameTextField: CustomTextField!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        loadingIndicator.isHidden = true
     }
     @IBAction func closeButtonTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -24,16 +27,25 @@ class LoginViewController: UIViewController {
     
     @IBAction func logginButtonPressed(_ sender: Any) {
         view.endEditing(true)
-        
+        loadingIndicator.isHidden = false
+        loadingIndicator.startAnimating()
         guard let email = userNameTextField.text, userNameTextField.text != "" else {
             return
         }
         guard let password = passwordTextField.text, passwordTextField.text != "" else {
             return
         }
-        AuthService.instance.loginUser(withUserName: email, andPassword: password) { (result) in
-            if(result) {
-                print("success")
+        AuthService.instance.loginUser(withUserName: email, andPassword: password) { (success) in
+            
+            self.loadingIndicator.stopAnimating()
+            self.loadingIndicator.isHidden = true
+            if(success) {
+                AuthService.instance.findUserByEmail(completion: { (success) in
+                    if success {
+                        NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
+                        self.dismiss(animated: true, completion: nil)
+                    }
+                })
             }
             else {
                 print("failure")
