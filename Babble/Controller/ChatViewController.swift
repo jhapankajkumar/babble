@@ -29,6 +29,5 @@ class ChatViewController: UIViewController {
                 }
             })
         }
-        
     }
 }
