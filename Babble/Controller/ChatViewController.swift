@@ -23,11 +23,17 @@ class ChatViewController: UIViewController {
         
         
         if AuthService.instance.isLoggedIn {
+            print("Token: \(AuthService.instance.authToken)")
             AuthService.instance.findUserByEmail(completion: { (success) in
                 if success {
                     NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
                 }
             })
         }
+        
+//        MessageService.instace.getChannels { (success) in
+//            print("success channel")
+//        }
+        
     }
 }

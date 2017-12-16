@@ -237,12 +237,15 @@
                                     <constraint firstAttribute="width" constant="22" id="jHr-ZW-Gnj"/>
                                 </constraints>
                                 <state key="normal" image="addChannelButton"/>
+                                <connections>
+                                    <action selector="addChannelBtnPressed:" destination="vJI-c1-Szg" eventType="touchUpInside" id="B3S-rb-C1f"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kJ2-YU-MGi">
                                 <rect key="frame" x="0.0" y="123" width="375" height="429"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ukO-Ep-8KZ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="channelCell" id="ukO-Ep-8KZ" customClass="ChannelCell" customModule="Babble" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ukO-Ep-8KZ" id="Wim-ba-Ovq">
@@ -250,21 +253,28 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#general" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sb7-TC-h04">
-                                                    <rect key="frame" x="35" y="12.5" width="65.5" height="20"/>
+                                                    <rect key="frame" x="25" y="12.5" width="65.5" height="20"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Sb7-TC-h04" firstAttribute="leading" secondItem="Wim-ba-Ovq" secondAttribute="leadingMargin" constant="20" id="28q-dy-dOj"/>
+                                                <constraint firstItem="Sb7-TC-h04" firstAttribute="leading" secondItem="Wim-ba-Ovq" secondAttribute="leadingMargin" constant="10" id="28q-dy-dOj"/>
                                                 <constraint firstItem="Sb7-TC-h04" firstAttribute="centerY" secondItem="Wim-ba-Ovq" secondAttribute="centerY" id="4qw-4V-r0u"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Sb7-TC-h04" secondAttribute="trailingMargin" id="Nbz-9A-tRk"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="channelName" destination="Sb7-TC-h04" id="KHM-Sr-B3c"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vJI-c1-Szg" id="18X-RR-JR3"/>
+                                    <outlet property="delegate" destination="vJI-c1-Szg" id="h3F-oq-c2E"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -291,6 +301,7 @@
                     </view>
                     <connections>
                         <outlet property="loginButton" destination="dAJ-3b-KKK" id="Czz-Xn-5hT"/>
+                        <outlet property="tableView" destination="kJ2-YU-MGi" id="hcB-mF-iRp"/>
                         <outlet property="userImage" destination="yF4-MQ-1P4" id="JH9-zU-xo8"/>
                         <segue destination="42s-P4-0mP" kind="show" identifier="toLogin" id="Zte-wL-Ipc"/>
                     </connections>

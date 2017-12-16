@@ -20,9 +20,10 @@ class MessageService {
         Alamofire.request(URL_GET_CHANNELS, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
             if response.result.error == nil {
                 guard let data =  response.data else {return}
-                
                 if let channelData = JSON(data: data).array {
-                    
+                    if channelData.count > 0 {
+                        self.channels.removeAll()
+                    }
                     for item in channelData {
                         let name  = item["name"].string
                         let description  = item["description"].string
@@ -42,4 +43,29 @@ class MessageService {
             }
         }
     }
+    
+    func addChannel(name: String, description: String,   completion: @escaping CompletionHandler) {
+     
+        let channelName = name.lowercased()
+        
+        let body : [String: Any] = [
+            "name" : channelName,
+            "description" : description
+        ]
+        
+        Alamofire.request(URL_ADD_CHANNEL, method: .post, parameters: body, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
+            if response.result.error == nil {
+                guard let data = response.data else{return}
+                print(data)
+                completion(true)
+            }
+            else{
+                completion(false)
+            }
+        }
+        
+        
+        
+    }
+    
 }

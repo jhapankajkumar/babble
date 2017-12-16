@@ -13,6 +13,9 @@
 		2C3A53AA1FCFEAB100D6641F /* AvatarPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A53A91FCFEAB100D6641F /* AvatarPickerViewController.swift */; };
 		2C3A53AC1FCFECC200D6641F /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A53AB1FCFECC200D6641F /* AvatarCell.swift */; };
 		2C3A53AF1FCFF7CF00D6641F /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A53AE1FCFF7CF00D6641F /* CircleImage.swift */; };
+		2C3B3AAB1FE56A53005EB9FA /* ChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B3AAA1FE56A53005EB9FA /* ChannelCell.swift */; };
+		2C3B3AAE1FE57297005EB9FA /* AddChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B3AAC1FE57297005EB9FA /* AddChannelViewController.swift */; };
+		2C3B3AAF1FE57297005EB9FA /* AddChannelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3B3AAD1FE57297005EB9FA /* AddChannelViewController.xib */; };
 		2C643DFF1FE23A2900C14BF3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C643DFD1FE23A2900C14BF3 /* ProfileViewController.swift */; };
 		2C643E001FE23A2900C14BF3 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C643DFE1FE23A2900C14BF3 /* ProfileViewController.xib */; };
 		2C643E031FE2719800C14BF3 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C643E021FE2719800C14BF3 /* MessageService.swift */; };
@@ -59,6 +62,9 @@
 		2C3A53A91FCFEAB100D6641F /* AvatarPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerViewController.swift; sourceTree = "<group>"; };
 		2C3A53AB1FCFECC200D6641F /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		2C3A53AE1FCFF7CF00D6641F /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		2C3B3AAA1FE56A53005EB9FA /* ChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCell.swift; sourceTree = "<group>"; };
+		2C3B3AAC1FE57297005EB9FA /* AddChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChannelViewController.swift; sourceTree = "<group>"; };
+		2C3B3AAD1FE57297005EB9FA /* AddChannelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddChannelViewController.xib; sourceTree = "<group>"; };
 		2C643DFD1FE23A2900C14BF3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		2C643DFE1FE23A2900C14BF3 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		2C643E021FE2719800C14BF3 /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
@@ -138,6 +144,7 @@
 		2C643E011FE23A3A00C14BF3 /* XIBs */ = {
 			isa = PBXGroup;
 			children = (
+				2C3B3AAD1FE57297005EB9FA /* AddChannelViewController.xib */,
 				2C643DFE1FE23A2900C14BF3 /* ProfileViewController.xib */,
 			);
 			path = XIBs;
@@ -221,6 +228,7 @@
 				2C30AC7B1F87CCBD007EFFCC /* CreateAccountViewController.swift */,
 				2C3A53A91FCFEAB100D6641F /* AvatarPickerViewController.swift */,
 				2C643DFD1FE23A2900C14BF3 /* ProfileViewController.swift */,
+				2C3B3AAC1FE57297005EB9FA /* AddChannelViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -241,6 +249,7 @@
 				2C9393231F80B02400420A25 /* GradientView.swift */,
 				2C3A53AB1FCFECC200D6641F /* AvatarCell.swift */,
 				2C3A53AE1FCFF7CF00D6641F /* CircleImage.swift */,
+				2C3B3AAA1FE56A53005EB9FA /* ChannelCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -374,6 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C7B7E251F80133C00042295 /* LaunchScreen.storyboard in Resources */,
+				2C3B3AAF1FE57297005EB9FA /* AddChannelViewController.xib in Resources */,
 				2C7B7E221F80133C00042295 /* Assets.xcassets in Resources */,
 				2C643E001FE23A2900C14BF3 /* ProfileViewController.xib in Resources */,
 				2C7B7E201F80133C00042295 /* Main.storyboard in Resources */,
@@ -469,6 +479,8 @@
 				2C643E051FE271C200C14BF3 /* Channel.swift in Sources */,
 				2C643DFF1FE23A2900C14BF3 /* ProfileViewController.swift in Sources */,
 				2C9393241F80B02400420A25 /* GradientView.swift in Sources */,
+				2C3B3AAE1FE57297005EB9FA /* AddChannelViewController.swift in Sources */,
+				2C3B3AAB1FE56A53005EB9FA /* ChannelCell.swift in Sources */,
 				2CA07DEC1FCFB08700F39F4D /* UserDataService.swift in Sources */,
 				2C7B7E1B1F80133C00042295 /* AppDelegate.swift in Sources */,
 				2C9393221F80ACA700420A25 /* SWRevealViewController.m in Sources */,

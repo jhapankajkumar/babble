@@ -8,11 +8,16 @@
 
 import UIKit
 
-class ChannelViewController: UIViewController {
+class ChannelViewController: UIViewController,AddChannelVCDelegate {
+    
 
+    @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var userImage: CircleImage!
     @IBOutlet weak var loginButton: UIButton!
+    
+    var channels = [Channel]()
+    
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue){
         
     }
@@ -22,6 +27,13 @@ class ChannelViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelViewController.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
         // Do any additional setup after loading the view.
+        
+        MessageService.instace.getChannels(completion: { (success) in
+            self.tableView .reloadData()
+        })
+        
+        
+        
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -57,4 +69,37 @@ class ChannelViewController: UIViewController {
         }
     }
 
+    @IBAction func addChannelBtnPressed(_ sender: Any) {
+        let profileView = AddChannelViewController()
+        profileView.delegate = self
+        profileView.modalPresentationStyle = .custom
+        present(profileView, animated: true, completion: nil)
+    }
+    
+    func channelAdded() {
+        MessageService.instace.getChannels(completion: { (success) in
+           self.tableView.reloadData()
+        })
+    }
 }
+
+extension ChannelViewController:UITableViewDelegate,UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return MessageService.instace.channels.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "channelCell", for: indexPath) as? ChannelCell else {
+            return UITableViewCell()
+        }
+        cell.configureCell(channel: MessageService.instace.channels[indexPath.row])
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+    
+}
+
