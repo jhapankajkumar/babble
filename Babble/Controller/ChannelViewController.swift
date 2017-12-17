@@ -26,7 +26,10 @@ class ChannelViewController: UIViewController,AddChannelVCDelegate {
         self.revealViewController().rearViewRevealWidth = self.view.frame.size.width  - 60
         
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelViewController.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
-        // Do any additional setup after loading the view.
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(ChannelViewController.channelLoaded(notification:)), name: NOTIF_USER_CHANNEL_DID_LOADED, object: nil)
+
+        
         
         SocketService.instance.getChannel(completion: { (success) in
             self.tableView .reloadData()
@@ -39,6 +42,9 @@ class ChannelViewController: UIViewController,AddChannelVCDelegate {
     }
     @objc func userDataDidChange(_ notification: NSNotification) {
         setupUserInfo()
+    }
+    @objc func channelLoaded(notification: Notification){
+        tableView.reloadData()
     }
     
     @IBAction func loginBtnPressed(_ sender: Any) {
@@ -64,15 +70,20 @@ class ChannelViewController: UIViewController,AddChannelVCDelegate {
             loginButton.setTitle("Login", for: .normal)
             userImage.image = UIImage(named: "menuProfileIcon")
             userImage.backgroundColor = UIColor.clear
+            tableView.reloadData()
         }
     }
 
     @IBAction func addChannelBtnPressed(_ sender: Any) {
-        let profileView = AddChannelViewController()
-        profileView.delegate = self
-        profileView.modalPresentationStyle = .custom
-        present(profileView, animated: true, completion: nil)
+        if AuthService.instance.isLoggedIn {
+            let profileView = AddChannelViewController()
+            profileView.delegate = self
+            profileView.modalPresentationStyle = .custom
+            present(profileView, animated: true, completion: nil)
+            
+        }
     }
+    
     
     func channelAdded() {
 //        SocketService.instance.getChannel(completion: { (success) in
@@ -96,7 +107,10 @@ extension ChannelViewController:UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let channel = MessageService.instance.channels[indexPath.row]
+        MessageService.instance.selectedChannel = channel
+        NotificationCenter.default.post(name: NOTIF_USER_CHANNEL_DID_SELECTED, object: nil)
+        self.revealViewController().revealToggle(animated: true)
     }
     
 }

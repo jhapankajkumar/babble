@@ -17,6 +17,8 @@
 		2C3B3AAE1FE57297005EB9FA /* AddChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B3AAC1FE57297005EB9FA /* AddChannelViewController.swift */; };
 		2C3B3AAF1FE57297005EB9FA /* AddChannelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3B3AAD1FE57297005EB9FA /* AddChannelViewController.xib */; };
 		2C44C5EE1FE67D5000E9EFFD /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C44C5ED1FE67D5000E9EFFD /* SocketService.swift */; };
+		2C44C5F01FE6A87D00E9EFFD /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C44C5EF1FE6A87D00E9EFFD /* Message.swift */; };
+		2C44C5F21FE6B8DA00E9EFFD /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C44C5F11FE6B8DA00E9EFFD /* KeyboardBoundView.swift */; };
 		2C643DFF1FE23A2900C14BF3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C643DFD1FE23A2900C14BF3 /* ProfileViewController.swift */; };
 		2C643E001FE23A2900C14BF3 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C643DFE1FE23A2900C14BF3 /* ProfileViewController.xib */; };
 		2C643E031FE2719800C14BF3 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C643E021FE2719800C14BF3 /* MessageService.swift */; };
@@ -67,6 +69,8 @@
 		2C3B3AAC1FE57297005EB9FA /* AddChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChannelViewController.swift; sourceTree = "<group>"; };
 		2C3B3AAD1FE57297005EB9FA /* AddChannelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddChannelViewController.xib; sourceTree = "<group>"; };
 		2C44C5ED1FE67D5000E9EFFD /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
+		2C44C5EF1FE6A87D00E9EFFD /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		2C44C5F11FE6B8DA00E9EFFD /* KeyboardBoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardBoundView.swift; sourceTree = "<group>"; };
 		2C643DFD1FE23A2900C14BF3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		2C643DFE1FE23A2900C14BF3 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		2C643E021FE2719800C14BF3 /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
@@ -240,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				2C643E041FE271C200C14BF3 /* Channel.swift */,
+				2C44C5EF1FE6A87D00E9EFFD /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -247,6 +252,7 @@
 		2C93931A1F80A21300420A25 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2C44C5F11FE6B8DA00E9EFFD /* KeyboardBoundView.swift */,
 				2C93932A1F80BD8D00420A25 /* BorderButton.swift */,
 				2C9393281F80BC5C00420A25 /* CustomTextField.swift */,
 				2C9393231F80B02400420A25 /* GradientView.swift */,
@@ -474,6 +480,7 @@
 			files = (
 				2C107F6D1F80C776003CD7E8 /* LoginViewController.swift in Sources */,
 				2C93931C1F80A23F00420A25 /* ChatViewController.swift in Sources */,
+				2C44C5F21FE6B8DA00E9EFFD /* KeyboardBoundView.swift in Sources */,
 				2C3A53AC1FCFECC200D6641F /* AvatarCell.swift in Sources */,
 				2C93931E1F80A24F00420A25 /* ChannelViewController.swift in Sources */,
 				2C30AC7F1F880548007EFFCC /* AuthService.swift in Sources */,
@@ -489,6 +496,7 @@
 				2C44C5EE1FE67D5000E9EFFD /* SocketService.swift in Sources */,
 				2C9393221F80ACA700420A25 /* SWRevealViewController.m in Sources */,
 				2C9393271F80BA8F00420A25 /* Constants.swift in Sources */,
+				2C44C5F01FE6A87D00E9EFFD /* Message.swift in Sources */,
 				2C9393291F80BC5C00420A25 /* CustomTextField.swift in Sources */,
 				2C3A53AA1FCFEAB100D6641F /* AvatarPickerViewController.swift in Sources */,
 				2C93932B1F80BD8D00420A25 /* BorderButton.swift in Sources */,

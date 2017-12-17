@@ -70,17 +70,44 @@
                                     <constraint firstItem="lSM-fh-vnQ" firstAttribute="leading" secondItem="wdi-mK-MSj" secondAttribute="leading" constant="12" id="yyu-4b-po3"/>
                                 </constraints>
                             </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wbx-k5-cBA">
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="2SN-3q-OcZ"/>
+                                </constraints>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qGD-LX-Vbm">
+                                <rect key="frame" x="337" y="632" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="Xmp-Gt-Yjs"/>
+                                    <constraint firstAttribute="height" constant="30" id="u7D-UF-7CZ"/>
+                                </constraints>
+                                <state key="normal" image="send"/>
+                                <connections>
+                                    <action selector="sendMessage:" destination="prl-tC-S1m" eventType="touchUpInside" id="bjX-5S-G6h"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Egg-d2-BpF" firstAttribute="trailing" secondItem="qGD-LX-Vbm" secondAttribute="trailing" constant="8" id="9zm-FZ-pI0"/>
+                            <constraint firstItem="Egg-d2-BpF" firstAttribute="trailing" secondItem="Wbx-k5-cBA" secondAttribute="trailing" id="C3I-xH-EeI"/>
+                            <constraint firstItem="qGD-LX-Vbm" firstAttribute="centerY" secondItem="Wbx-k5-cBA" secondAttribute="centerY" id="PSE-uP-vW0"/>
                             <constraint firstItem="wdi-mK-MSj" firstAttribute="trailing" secondItem="Egg-d2-BpF" secondAttribute="trailing" id="YAv-hV-FLn"/>
                             <constraint firstItem="wdi-mK-MSj" firstAttribute="top" secondItem="Egg-d2-BpF" secondAttribute="top" constant="-20" id="jAz-cE-38o"/>
+                            <constraint firstItem="Wbx-k5-cBA" firstAttribute="bottom" secondItem="Egg-d2-BpF" secondAttribute="bottom" id="n2g-ou-pRv"/>
+                            <constraint firstItem="Wbx-k5-cBA" firstAttribute="leading" secondItem="Egg-d2-BpF" secondAttribute="leading" id="oYh-We-Cg6"/>
                             <constraint firstItem="wdi-mK-MSj" firstAttribute="leading" secondItem="Egg-d2-BpF" secondAttribute="leading" id="tlD-E8-CRZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Egg-d2-BpF"/>
                     </view>
                     <connections>
                         <outlet property="menuBtn" destination="lSM-fh-vnQ" id="YC8-6M-us1"/>
+                        <outlet property="messageTextBox" destination="Wbx-k5-cBA" id="WUA-LA-JEr"/>
+                        <outlet property="navTitle" destination="Z9O-hH-prE" id="NoV-br-cgV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tfO-PN-EXU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -734,6 +761,7 @@
         <image name="addChannelButton" width="22" height="22"/>
         <image name="closeButton" width="28" height="28"/>
         <image name="menuProfileIcon" width="99" height="99"/>
+        <image name="send" width="30" height="30"/>
         <image name="smackBack" width="28" height="28"/>
         <image name="smackBurger" width="40" height="40"/>
         <image name="smackLogo" width="48" height="40"/>
