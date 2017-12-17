@@ -19,6 +19,7 @@
 		2C44C5EE1FE67D5000E9EFFD /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C44C5ED1FE67D5000E9EFFD /* SocketService.swift */; };
 		2C44C5F01FE6A87D00E9EFFD /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C44C5EF1FE6A87D00E9EFFD /* Message.swift */; };
 		2C44C5F21FE6B8DA00E9EFFD /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C44C5F11FE6B8DA00E9EFFD /* KeyboardBoundView.swift */; };
+		2C44C5F41FE6BCEF00E9EFFD /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C44C5F31FE6BCEF00E9EFFD /* MessageCell.swift */; };
 		2C643DFF1FE23A2900C14BF3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C643DFD1FE23A2900C14BF3 /* ProfileViewController.swift */; };
 		2C643E001FE23A2900C14BF3 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C643DFE1FE23A2900C14BF3 /* ProfileViewController.xib */; };
 		2C643E031FE2719800C14BF3 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C643E021FE2719800C14BF3 /* MessageService.swift */; };
@@ -71,6 +72,7 @@
 		2C44C5ED1FE67D5000E9EFFD /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 		2C44C5EF1FE6A87D00E9EFFD /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		2C44C5F11FE6B8DA00E9EFFD /* KeyboardBoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardBoundView.swift; sourceTree = "<group>"; };
+		2C44C5F31FE6BCEF00E9EFFD /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		2C643DFD1FE23A2900C14BF3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		2C643DFE1FE23A2900C14BF3 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		2C643E021FE2719800C14BF3 /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 				2C3A53AB1FCFECC200D6641F /* AvatarCell.swift */,
 				2C3A53AE1FCFF7CF00D6641F /* CircleImage.swift */,
 				2C3B3AAA1FE56A53005EB9FA /* ChannelCell.swift */,
+				2C44C5F31FE6BCEF00E9EFFD /* MessageCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -495,6 +498,7 @@
 				2C7B7E1B1F80133C00042295 /* AppDelegate.swift in Sources */,
 				2C44C5EE1FE67D5000E9EFFD /* SocketService.swift in Sources */,
 				2C9393221F80ACA700420A25 /* SWRevealViewController.m in Sources */,
+				2C44C5F41FE6BCEF00E9EFFD /* MessageCell.swift in Sources */,
 				2C9393271F80BA8F00420A25 /* Constants.swift in Sources */,
 				2C44C5F01FE6A87D00E9EFFD /* Message.swift in Sources */,
 				2C9393291F80BC5C00420A25 /* CustomTextField.swift in Sources */,
