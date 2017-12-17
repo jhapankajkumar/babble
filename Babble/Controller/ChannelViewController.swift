@@ -28,11 +28,9 @@ class ChannelViewController: UIViewController,AddChannelVCDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelViewController.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
         // Do any additional setup after loading the view.
         
-        MessageService.instace.getChannels(completion: { (success) in
+        SocketService.instance.getChannel(completion: { (success) in
             self.tableView .reloadData()
         })
-        
-        
         
     }
 
@@ -77,23 +75,23 @@ class ChannelViewController: UIViewController,AddChannelVCDelegate {
     }
     
     func channelAdded() {
-        MessageService.instace.getChannels(completion: { (success) in
-           self.tableView.reloadData()
-        })
+//        SocketService.instance.getChannel(completion: { (success) in
+//           self.tableView.reloadData()
+//        })
     }
 }
 
 extension ChannelViewController:UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return MessageService.instace.channels.count
+        return MessageService.instance.channels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "channelCell", for: indexPath) as? ChannelCell else {
             return UITableViewCell()
         }
-        cell.configureCell(channel: MessageService.instace.channels[indexPath.row])
+        cell.configureCell(channel: MessageService.instance.channels[indexPath.row])
         return cell
     }
     

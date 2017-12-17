@@ -29,11 +29,11 @@ class ChatViewController: UIViewController {
                     NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
                 }
             })
+            
+            MessageService.instance.getChannels { (success) in
+                print("success channel")
+            }
         }
-        
-//        MessageService.instace.getChannels { (success) in
-//            print("success channel")
-//        }
         
     }
 }

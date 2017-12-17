@@ -29,7 +29,7 @@ class AddChannelViewController: UIViewController {
     
     @IBAction func createChannelBtnPressed(_ sender: Any) {
         if let channelName = self.channelName.text, self.channelName.text != nil, let description = self.channelDescription.text , self.channelDescription.text != nil {
-            MessageService.instace.addChannel(name: channelName, description: description, completion: { (success) in
+            SocketService.instance.addChannel(channelName: channelName, channelDesc: description, completion: { (success) in
                 if success {
                     self.delegate?.channelAdded()
                     self.dismiss(animated: true, completion: nil)
