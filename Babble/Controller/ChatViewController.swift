@@ -125,7 +125,10 @@ class ChatViewController: UIViewController,UITextFieldDelegate {
     }
     
     @IBAction func sendMessage(_ sender: Any) {
-        
+        sendMessageToServer()
+    }
+    
+    func sendMessageToServer() {
         if AuthService.instance.isLoggedIn {
             guard let channelId = MessageService.instance.selectedChannel._id else {return}
             
@@ -140,7 +143,6 @@ class ChatViewController: UIViewController,UITextFieldDelegate {
         }
     }
     
-    
     @IBAction func messageBoxEditing(_ sender: Any) {
         if messageTextBox.text == "" {
             isTyping = false
@@ -154,9 +156,15 @@ class ChatViewController: UIViewController,UITextFieldDelegate {
         }
 
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        sendMessageToServer()
+        return true
+    }
 }
 
 extension ChatViewController: UITableViewDataSource,UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return MessageService.instance.messages.count
     }
