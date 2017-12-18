@@ -10,7 +10,7 @@ import UIKit
 
 class ChannelViewController: UIViewController,AddChannelVCDelegate {
     
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var userImage: CircleImage!
@@ -28,8 +28,6 @@ class ChannelViewController: UIViewController,AddChannelVCDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelViewController.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelViewController.channelLoaded(notification:)), name: NOTIF_USER_CHANNEL_DID_LOADED, object: nil)
-
-        
         
         SocketService.instance.getChannel(completion: { (success) in
             self.tableView .reloadData()
@@ -41,10 +39,8 @@ class ChannelViewController: UIViewController,AddChannelVCDelegate {
                 self.tableView.reloadData()
             }
         }
-        
-        
     }
-
+    
     override func viewDidAppear(_ animated: Bool) {
         setupUserInfo()
     }
@@ -81,7 +77,7 @@ class ChannelViewController: UIViewController,AddChannelVCDelegate {
             tableView.reloadData()
         }
     }
-
+    
     @IBAction func addChannelBtnPressed(_ sender: Any) {
         if AuthService.instance.isLoggedIn {
             let profileView = AddChannelViewController()
@@ -94,9 +90,6 @@ class ChannelViewController: UIViewController,AddChannelVCDelegate {
     
     
     func channelAdded() {
-//        SocketService.instance.getChannel(completion: { (success) in
-//           self.tableView.reloadData()
-//        })
     }
 }
 
@@ -126,7 +119,7 @@ extension ChannelViewController:UITableViewDelegate,UITableViewDataSource {
         
         
         NotificationCenter.default.post(name: NOTIF_USER_CHANNEL_DID_SELECTED, object: nil)
-
+        
         self.revealViewController().revealToggle(animated: true)
     }
     

@@ -36,8 +36,6 @@ class AvatarPickerViewController: UIViewController {
         }
         avatarCollectionView.reloadData()
     }
-    
-    
 }
 
 
@@ -83,10 +81,6 @@ extension AvatarPickerViewController : UICollectionViewDelegateFlowLayout {
         return CGSize(width: cellDimension, height: cellDimension)
     }
 }
-
-//protocol AvatarPickerViewControllerDelegate {
-//
-//}
 
 
 

@@ -82,6 +82,4 @@ class SocketService: NSObject {
         let userName = UserDataService.instace.name
         socket.emit("startType", userName,channelId)
     }
-    
-    
 }

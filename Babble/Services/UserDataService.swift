@@ -73,5 +73,4 @@ class UserDataService {
         MessageService.instance.clearChannel()
         MessageService.instance.clearMessage()
     }
-    
 }

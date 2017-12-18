@@ -63,7 +63,6 @@ class  AuthService {
         }
     }
     
-    
     func loginUser(withUserName userName: String, andPassword password: String, completion: @escaping CompletionHandler) {
         let lowercaseUser = userName.lowercased()
         let header = [
@@ -91,7 +90,6 @@ class  AuthService {
             }
         })
     }
-
     
     func createUser(name: String, email:String, avatarName:String, avatarColor: String, completion: @escaping CompletionHandler) {
         let lowercaseEmail = email.lowercased()
@@ -116,7 +114,6 @@ class  AuthService {
             }
         }
     }
-    
     
     func findUserByEmail(completion: @escaping CompletionHandler) {
         Alamofire.request("\(URL_USER_BY_EMAIL)\(userEmail)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
@@ -177,10 +174,6 @@ class  AuthService {
         
         return address
     }
-    
-    
-    
-    
 }
 
 

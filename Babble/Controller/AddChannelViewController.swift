@@ -41,7 +41,6 @@ class AddChannelViewController: UIViewController {
     @objc func closeTapped(_ notificaiton: NSNotification) {
         dismiss(animated: true, completion: nil)
     }
-    
 }
 
 protocol AddChannelVCDelegate: class {

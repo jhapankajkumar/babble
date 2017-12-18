@@ -18,7 +18,6 @@ class MessageService {
     var unreadChannelids = [String]()
     
     var selectedChannel = Channel()
-    
 
     func getChannels(completion: @escaping CompletionHandler) {
         Alamofire.request(URL_GET_CHANNELS, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
@@ -101,7 +100,6 @@ class MessageService {
         }
         
     }
-    
     func clearMessage()   {
         self.messages.removeAll()
     }
@@ -109,5 +107,4 @@ class MessageService {
     func clearChannel() {
         self.channels.removeAll()
     }
-    
 }

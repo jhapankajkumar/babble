@@ -35,8 +35,6 @@ class ProfileViewController: UIViewController {
         backGroundView.addGestureRecognizer(closeTap)
     }
     
-    
-
     @IBAction func closeButtonTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil
         )
@@ -51,7 +49,4 @@ class ProfileViewController: UIViewController {
   @objc func closeTapped(_ notificaiton: NSNotification) {
         dismiss(animated: true, completion: nil)
     }
-    
-
-
 }
