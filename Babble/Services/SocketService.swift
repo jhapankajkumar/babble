@@ -48,7 +48,7 @@ class SocketService: NSObject {
         completion(true)
     }
     
-    func getMessage(completion: @escaping CompletionHandler) {
+    func getMessage(completion: @escaping (_ message: Message)-> Void) {
         socket.on("messageCreated") { (dataArray, ack) in
             guard let messageBody = dataArray[0] as? String else {return}
             guard let userId = dataArray[1] as? String else {return}
@@ -58,16 +58,30 @@ class SocketService: NSObject {
             guard let avatarColor = dataArray[5] as? String else {return}
             guard let messageid = dataArray[5] as? String else {return}
             guard let timeStamp = dataArray[7] as? String else {return}
+            let message = Message(message: messageBody, userName: userName, channelId: channelId, userAvatar: avatar, avatarColor: avatarColor, id: messageid, timeStamp: timeStamp)
             
-            if channelId == MessageService.instance.selectedChannel._id {
-                let message = Message(message: messageBody, userName: userName, channelId: channelId, userAvatar: avatar, avatarColor: avatarColor, id: messageid, timeStamp: timeStamp)
-                MessageService.instance.messages.append(message)
-                completion(true)
-            }
-            else {
-                completion(false)
-            }
+            completion(message)
+         }
+    }
+    
+    func getTypeingUser(_ completionHandeler: @escaping (_ typingUsers: [String: String])-> Void) {
+        socket.on("userTypingUpdate") { (dataArray, ack) in
+            guard let typingUsers = dataArray[0] as? [String: String] else {return}
+            //guard let channelId = dataArray[1] as? String else {return}
+            completionHandeler(typingUsers)
         }
     }
+    
+    func stopTypingUser(){
+        let userName = UserDataService.instace.name
+        socket.emit("stopType", userName)
+    }
+    
+    func startTypingUser() {
+        guard let channelId = MessageService.instance.selectedChannel._id else {return}
+        let userName = UserDataService.instace.name
+        socket.emit("startType", userName,channelId)
+    }
+    
     
 }

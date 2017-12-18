@@ -15,6 +15,7 @@ class ChatViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var navTitle: UILabel!
     @IBOutlet weak var messageListTableView: UITableView!
     
+    @IBOutlet weak var typingUser: UILabel!
     var isTyping = false
     
     @IBAction func loginButtonPressed(_ sender: Any) {
@@ -46,11 +47,42 @@ class ChatViewController: UIViewController,UITextFieldDelegate {
             
         }
         
-        SocketService.instance.getMessage { (success) in
-            if success {
+        SocketService.instance.getMessage { (message) in
+            if message.channelId == MessageService.instance.selectedChannel._id && AuthService.instance.isLoggedIn {
+                MessageService.instance.messages.append(message)
                 self.messageListTableView.reloadData()
                 self.showLastRow()
             }
+        }
+        
+        SocketService.instance.getTypeingUser { (typingUsers) in
+            guard let channelId = MessageService.instance.selectedChannel._id else {return}
+            var names = ""
+            var numberOfTypers =  0
+            
+            for (typingUser, channel ) in typingUsers {
+                if typingUser != UserDataService.instace.name && channelId == channel {
+                    if names == "" {
+                        names  = typingUser
+                    }
+                    else {
+                        names = "\(names),\(typingUser)"
+                    }
+                    numberOfTypers += 1
+                }
+            }
+            
+            if numberOfTypers > 0 && AuthService.instance.isLoggedIn {
+                var verb = "is"
+                if numberOfTypers > 1 {
+                    verb = "are"
+                }
+                self.typingUser.text = "\(names) \(verb) typing message..."
+            }
+            else {
+                self.typingUser.text = ""
+            }
+            
         }
         
         view.bindToKeyboard()
@@ -129,6 +161,7 @@ class ChatViewController: UIViewController,UITextFieldDelegate {
     }
     
     func sendMessageToServer() {
+        SocketService.instance.stopTypingUser()
         if AuthService.instance.isLoggedIn {
             guard let channelId = MessageService.instance.selectedChannel._id else {return}
             
@@ -137,7 +170,9 @@ class ChatViewController: UIViewController,UITextFieldDelegate {
             SocketService.instance.sendMessage(messageBody: message, userId: UserDataService.instace.id, channelId: channelId, completion: {(success) in
                 if success {
                     self.messageTextBox.text = ""
-                    self.messageTextBox.resignFirstResponder()
+                    self.isTyping = false
+                    self.sendButton.isHidden = true
+                    //self.messageTextBox.resignFirstResponder()
                 }
             })
         }
@@ -147,17 +182,21 @@ class ChatViewController: UIViewController,UITextFieldDelegate {
         if messageTextBox.text == "" {
             isTyping = false
             sendButton.isHidden = true
+            SocketService.instance.stopTypingUser()
         }
         else {
             if isTyping == false {
                 sendButton.isHidden = false
             }
             isTyping = true
+            SocketService.instance.startTypingUser()
         }
 
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        isTyping = false
+        sendButton.isHidden = true
         sendMessageToServer()
         return true
     }

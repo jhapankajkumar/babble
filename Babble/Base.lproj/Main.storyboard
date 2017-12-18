@@ -161,11 +161,21 @@
                                     <outlet property="delegate" destination="prl-tC-S1m" id="WJa-rZ-efG"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYS-eE-6dg">
+                                <rect key="frame" x="4" y="605" width="122" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="122" id="Egg-ty-bwt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Egg-d2-BpF" firstAttribute="trailing" secondItem="uZt-H3-SSG" secondAttribute="trailing" id="5lg-Wx-7nt"/>
                             <constraint firstItem="uZt-H3-SSG" firstAttribute="top" secondItem="wdi-mK-MSj" secondAttribute="bottom" id="7ra-3M-vje"/>
+                            <constraint firstItem="JYS-eE-6dg" firstAttribute="leading" secondItem="Egg-d2-BpF" secondAttribute="leading" constant="4" id="8yY-SZ-zBL"/>
                             <constraint firstItem="Egg-d2-BpF" firstAttribute="trailing" secondItem="qGD-LX-Vbm" secondAttribute="trailing" constant="8" id="9zm-FZ-pI0"/>
                             <constraint firstItem="Egg-d2-BpF" firstAttribute="trailing" secondItem="Wbx-k5-cBA" secondAttribute="trailing" id="C3I-xH-EeI"/>
                             <constraint firstItem="Wbx-k5-cBA" firstAttribute="top" secondItem="uZt-H3-SSG" secondAttribute="bottom" constant="30" id="CzP-YF-Ipb"/>
@@ -173,9 +183,11 @@
                             <constraint firstItem="qGD-LX-Vbm" firstAttribute="centerY" secondItem="Wbx-k5-cBA" secondAttribute="centerY" id="PSE-uP-vW0"/>
                             <constraint firstItem="wdi-mK-MSj" firstAttribute="trailing" secondItem="Egg-d2-BpF" secondAttribute="trailing" id="YAv-hV-FLn"/>
                             <constraint firstItem="wdi-mK-MSj" firstAttribute="top" secondItem="Egg-d2-BpF" secondAttribute="top" constant="-20" id="jAz-cE-38o"/>
+                            <constraint firstItem="Wbx-k5-cBA" firstAttribute="top" secondItem="JYS-eE-6dg" secondAttribute="bottom" constant="4" id="kZu-1m-UQO"/>
                             <constraint firstItem="Wbx-k5-cBA" firstAttribute="bottom" secondItem="Egg-d2-BpF" secondAttribute="bottom" id="n2g-ou-pRv"/>
                             <constraint firstItem="Wbx-k5-cBA" firstAttribute="leading" secondItem="Egg-d2-BpF" secondAttribute="leading" id="oYh-We-Cg6"/>
                             <constraint firstItem="wdi-mK-MSj" firstAttribute="leading" secondItem="Egg-d2-BpF" secondAttribute="leading" id="tlD-E8-CRZ"/>
+                            <constraint firstItem="JYS-eE-6dg" firstAttribute="top" secondItem="uZt-H3-SSG" secondAttribute="bottom" constant="8" id="x9N-rh-jOf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Egg-d2-BpF"/>
                     </view>
@@ -185,6 +197,7 @@
                         <outlet property="messageTextBox" destination="Wbx-k5-cBA" id="WUA-LA-JEr"/>
                         <outlet property="navTitle" destination="Z9O-hH-prE" id="NoV-br-cgV"/>
                         <outlet property="sendButton" destination="qGD-LX-Vbm" id="LcZ-Uk-obx"/>
+                        <outlet property="typingUser" destination="JYS-eE-6dg" id="wx7-Zp-Fd8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tfO-PN-EXU" userLabel="First Responder" sceneMemberID="firstResponder"/>
